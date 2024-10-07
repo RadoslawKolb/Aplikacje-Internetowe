@@ -1,191 +1,238 @@
-/* Resetowanie domyślnych stylów */
+/* Resetowanie stylów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styl nagłówka */
+/* Styl dla całego ciała strony z obrazem tła */
+body {
+    background-image: url('page1_tlo.jpg'); /* Ścieżka do obrazu tła */
+    background-size: cover; /* Dopasowanie obrazu do rozmiaru okna */
+    background-position: center; /* Wycentrowanie obrazu */
+    background-attachment: fixed; /* Obraz tła będzie nieruchomy podczas przewijania */
+    background-repeat: no-repeat; /* Brak powtarzania obrazu tła */
+    color: white; /* Ustawienie koloru tekstu */
+    font-family: Arial, sans-serif; /* Zmienna czcionka dla lepszego wyglądu */
+}
+
+/* Nowy styl nagłówka */
 header {
-    background-color: #1c1c1c;
-    color: white;
+    background-color: rgba(26, 26, 26, 0.8); /* Tło z przezroczystością */
     padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-header img {
-    width: 200px;
-    margin-bottom: 10px;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #dcdcdc;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-header nav ul li a:hover {
-    color: #f39c12;
-}
-
-header .actions {
-    margin-top: 10px;
-}
-
-header .actions a {
-    background-color: #f39c12;
     color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.game-title {
+    font-size: 40px;
+    margin-left: 15px;
+    color: #cda732;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #cda732;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e6c078;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.actions .button {
     padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
 }
 
-header .actions a:hover {
-    background-color: #d35400;
+.free-trial {
+    background-color: #cda732;
+    transition: background-color 0.3s;
 }
 
-/* Sekcja główna */
-.main-section {
-    padding: 40px;
-    background-color: #2e2e2e;
+.free-trial:hover {
+    background-color: #e6c078;
+}
+
+.buy-now {
+    background-color: #b2452a;
+    transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #d85b4e;
+}
+
+/* Styl dla sekcji bohatera (hero-section) */
+.hero-section {
+    display: flex;
+    background-color: rgba(21, 21, 21, 0.8); /* Przezroczyste tło dla efektu przenikania obrazu */
     color: white;
-    text-align: left;
-    font-family: 'Arial', sans-serif;
+    padding: 50px;
+    align-items: center;
 }
 
-.main-section h1 {
-    font-size: 36px;
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    color: #cda732;
+    margin-bottom: 15px;
+}
+
+.hero-content h3 {
+    font-size: 32px;
+    color: #f4e1c1;
     margin-bottom: 20px;
-    color: #f39c12;
 }
 
-.main-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.main-section h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
     color: #dcdcdc;
 }
 
-.main-section p, .main-section ul {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.main-section ul {
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
-.main-section ul li {
-    margin-bottom: 10px;
-}
-
-/* Sekcja rankingu bossów */
-.boss-ranking-section {
-    padding: 40px;
-    background-color: #1c1c1c;
-    color: #f5f5f5;
-    font-family: 'Arial', sans-serif;
-}
-
-.boss-ranking-section h2 {
-    font-size: 28px;
-    color: #f39c12;
-    margin-bottom: 20px;
-}
-
-.boss-ranking-section h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #dcdcdc;
-}
-
-.boss-ranking-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.hero-video iframe {
+    border-radius: 10px;
+    width: 90%;
 }
 
 /* Sekcja funkcji */
 .features-section {
-    padding: 40px;
-    background-color: #2e2e2e;
-    color: white;
-    font-family: 'Arial', sans-serif;
+    padding: 50px;
+    background-color: rgba(34, 34, 34, 0.8); /* Przezroczyste tło dla efektu przenikania */
+    text-align: center;
 }
 
-.features-section h2, .features-section h3 {
-    color: #f39c12;
+.features-section h2 {
+    font-size: 36px;
+    color: #cda732;
+    margin-bottom: 40px;
 }
 
-.features-section ul {
-    list-style-type: square;
-    padding-left: 40px;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
 }
 
-.features-section ul li {
-    font-size: 18px;
-    margin-bottom: 15px;
+.feature {
+    background-color: rgba(28, 28, 28, 0.9); /* Przezroczystość dla efektu przenikania */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    font-size: 24px;
+    color: #e6c078;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #dcdcdc;
     line-height: 1.6;
 }
 
-.features-section ul li strong {
-    color: #f39c12;
+/* Ranking bossów */
+.boss-ranking-section {
+    padding: 50px;
+    background-color: rgba(21, 21, 21, 0.8); /* Przezroczyste tło dla efektu przenikania */
+    color: white;
+    text-align: center;
 }
 
-/* Styl stopki */
+.boss-ranking-section h2 {
+    font-size: 36px;
+    color: #cda732;
+    margin-bottom: 40px;
+}
+
+.boss-ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.boss {
+    background-color: rgba(28, 28, 28, 0.9); /* Przezroczystość dla efektu przenikania */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.boss:hover {
+    transform: scale(1.05);
+}
+
+.boss h3 {
+    font-size: 24px;
+    color: #e6c078;
+    margin-bottom: 10px;
+}
+
+.boss p {
+    font-size: 16px;
+    color: #dcdcdc;
+    line-height: 1.7;
+}
+
+/* Stopka */
 footer {
-    background-color: #1c1c1c;
+    background-color: rgba(0, 0, 0, 0.8); /* Przezroczystość w stopce */
     color: #dcdcdc;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
     font-size: 14px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
 }
 
 footer a {
-    color: #f39c12;
+    color: #cda732;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #d35400;
-}
-
-/* Dostosowanie wyświetlania na mniejszych ekranach */
-@media (max-width: 768px) {
-    header nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-    
-    header .actions a {
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .main-section, .boss-ranking-section, .features-section {
-        padding: 20px;
-    }
-    
-    .main-section h1, .main-section h2, .main-section h3, .boss-ranking-section h2, .features-section h2 {
-        font-size: 24px;
-    }
+    color: #e6c078;
 }

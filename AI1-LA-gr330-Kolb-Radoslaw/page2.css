@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+/* Styl ciała z tłem */
+body {
+    background-image: url('page2_tlo.jpg'); /* Zmień na odpowiednią ścieżkę do zdjęcia */
+    background-size: cover;
+    background-position: center;
+}
+
+
 /* Styl nagłówka z neonowymi efektami */
 header {
     background: linear-gradient(45deg, #ff00ff, #00ffff);
@@ -78,8 +86,8 @@ header .actions a:hover {
 /* Styl głównej sekcji – odważne kolory i animacje */
 .main-section {
     padding: 40px;
-    background: radial-gradient(circle, #111, #000);
-    color: #00ff00;
+    background: rgba(0, 0, 0, 0.7); /* Przezroczyste tło */
+    color: #00ffcc; /* Mroźny zielony */
     text-align: left;
     font-family: 'Exo', sans-serif;
     letter-spacing: 1px;
@@ -108,14 +116,14 @@ header .actions a:hover {
 .main-section h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00;
+    color: #00ffcc; /* Mroźny zielony */
+    text-shadow: 0 0 10px #00ffcc;
 }
 
 .main-section h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #00ffff;
+    color: #00ffff; /* Mroźny niebieski */
     text-shadow: 0 0 10px #00ffff;
 }
 
@@ -132,7 +140,7 @@ header .actions a:hover {
 }
 
 .main-section ul li {
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    background: rgba(0, 153, 255, 0.8); /* Mroźny błękit */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -146,7 +154,7 @@ header .actions a:hover {
 /* Sekcja rankingu bossów – jaskrawy design */
 .boss-ranking-section {
     padding: 40px;
-    background-color: #1a1a1a;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ff00ff;
     font-family: 'Orbitron', sans-serif;
     border-top: 3px solid #ff00ff;
@@ -178,7 +186,7 @@ header .actions a:hover {
 /* Sekcja funkcji z efektami neonowymi */
 .features-section {
     padding: 40px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    background: rgba(0, 153, 255, 0.8); /* Mroźny błękit */
     color: #fff;
     font-family: 'Exo', sans-serif;
     text-align: center;
@@ -214,7 +222,7 @@ header .actions a:hover {
 
 /* Styl stopki – neonowy wygląd */
 footer {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -267,10 +275,7 @@ header nav ul li a:hover:before, footer a:hover:before {
         font-size: 36px;
     }
 
-    .boss-ranking-section h2 {
-        font-size: 28px;
-    }
-
+    .boss-ranking-section h2,
     .features-section h2 {
         font-size: 28px;
     }
