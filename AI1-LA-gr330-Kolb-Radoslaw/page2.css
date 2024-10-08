@@ -12,7 +12,6 @@ body {
     background-position: center;
 }
 
-
 /* Styl nagłówka z neonowymi efektami */
 header {
     background: linear-gradient(45deg, #ff00ff, #00ffff);
@@ -278,5 +277,24 @@ header nav ul li a:hover:before, footer a:hover:before {
     .boss-ranking-section h2,
     .features-section h2 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        width: 150px;
+    }
+    
+    .main-section h1 {
+        font-size: 32px;
+    }
+    
+    .main-section h2 {
+        font-size: 24px;
+    }
+    
+    .features-section h2,
+    .boss-ranking-section h2 {
+        font-size: 24px;
     }
 }

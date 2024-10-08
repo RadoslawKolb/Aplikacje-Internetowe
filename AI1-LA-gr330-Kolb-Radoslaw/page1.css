@@ -27,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Dodano flex-wrap aby elementy lepiej układały się na mniejszych ekranach */
 }
 
 .logo-container {
@@ -49,6 +50,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* Dodano flex-wrap dla lepszej responsywności */
 }
 
 nav ul li a {
@@ -66,6 +68,7 @@ nav ul li a:hover {
 .actions {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* Dodano flex-wrap dla lepszej responsywności */
 }
 
 .actions .button {
@@ -101,10 +104,11 @@ nav ul li a:hover {
     color: white;
     padding: 50px;
     align-items: center;
+    flex-wrap: wrap; /* Dodano flex-wrap dla lepszej responsywności */
 }
 
 .hero-content {
-    width: 50%;
+    width: 100%; /* Zmieniono z 50% na 100%, aby lepiej wyglądało na mniejszych ekranach */
 }
 
 .hero-content h2 {
@@ -127,7 +131,8 @@ nav ul li a:hover {
 
 .hero-video iframe {
     border-radius: 10px;
-    width: 90%;
+    width: 100%; /* Zmieniono na 100% dla responsywności */
+    max-width: 560px; /* Maksymalna szerokość dla większych ekranów */
 }
 
 /* Sekcja funkcji */
@@ -145,7 +150,7 @@ nav ul li a:hover {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Zmieniono na auto-fit dla lepszej responsywności */
     gap: 25px;
 }
 
@@ -187,7 +192,7 @@ nav ul li a:hover {
 
 .boss-ranking-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Zmieniono na auto-fit dla lepszej responsywności */
     gap: 30px;
 }
 
@@ -235,4 +240,38 @@ footer a {
 
 footer a:hover {
     color: #e6c078;
+}
+
+/* Media queries - Dostosowanie dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Zmiana układu na kolumnowy dla mniejszych ekranów */
+    }
+
+    .hero-section {
+        flex-direction: column; /* Sekcja hero w jednej kolumnie */
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%; /* Hero content zajmuje całą szerokość */
+    }
+
+    .hero-video iframe {
+        width: 100%; /* Zajmuje całą szerokość na mniejszych ekranach */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 28px; /* Mniejszy rozmiar tytułu na najmniejszych ekranach */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Mniejszy rozmiar czcionki w nawigacji */
+    }
+
+    .features-grid, .boss-ranking-grid {
+        grid-template-columns: 1fr; /* Zmiana układu na jedną kolumnę */
+    }
 }
