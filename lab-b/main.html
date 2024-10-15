@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista ToDo - LAB B</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="skrypt.js"></script>
+</head>
+<body>
+
+    <div id="myDIV" class="header">
+        <h2>Lista ToDo</h2>
+        <input type="text" id="searchInput" placeholder="Szukaj...">
+        <ul id="myUL">
+            
+            <li><span class="not-completed">makaron</span> <input type="date" value="2024-10-15"> <button class="deleteBtn">🗑️</button></li>
+            <li><span class="completed">zrobić zadanie na laboratoria</span> <input type="date" value="2024-10-20"> <button class="deleteBtn">🗑️</button></li>
+            <li><span class="empty"></span> <input type="date" value=""> <button class="deleteBtn">🗑️</button></li>
+        </ul>
+    </div>
+
+    <div class="new-task">
+        <input type="text" id="newTaskInput" placeholder="Dodaj nowe zadanie...">
+        <input type="date" id="newTaskDate">
+        <button onclick="newElement()" class="addBtn">Zapisz</button>
+    </div>
+
+    
+</body>
+</html>

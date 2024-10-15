@@ -1,0 +1,99 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+#myInput {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.addBtn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    margin-left: 10px;
+}
+
+.addBtn:hover {
+    background-color: #555;
+}
+
+/* Styl listy zadań */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: 15px;
+    background-color: #eee;
+    margin-bottom: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+li:nth-child(even) {
+    background-color: #ddd;
+}
+
+
+.checked {
+    text-decoration: line-through;
+    
+}
+
+
+li:hover {
+    background-color: #ccc;
+}
+
+
+ul li::before {
+    content: "\2713"; 
+    margin-right: 10px;
+    color: green;
+}
+
+
+.not-completed {
+    color: green;
+    text-decoration: none;
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.empty {
+    color: black;
+    font-style: italic;
+}
+
+
