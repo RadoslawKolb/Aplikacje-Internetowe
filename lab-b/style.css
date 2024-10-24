@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+#task-list {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#task-list li:hover {
+    background-color: #f9f9f9;
+}
+
+.task-text {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.task-date {
+    margin-right: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+mark {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#new-task, #task-date {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#add-task {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task:hover {
+    background-color: #45a049;
+}
