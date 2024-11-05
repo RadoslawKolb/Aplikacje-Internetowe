@@ -102,12 +102,29 @@ function drop(e) {
 
             setTimeout(() => {
                 if (isCorrect) {
-                    alert('Gratulacje! Ułożyłeś puzzle!');
+                    if (Notification.permission === 'granted') {
+                        new Notification('Gratulacje! Ułożyłeś puzzle!');
+                    } else if (Notification.permission !== 'denied') {
+                        Notification.requestPermission().then(permission => {
+                            if (permission === 'granted') {
+                                new Notification('Gratulacje! Ułożyłeś puzzle!');
+                            }
+                        });
+                    }
                 } else {
-                    alert('Złe ułożenie puzzli! Spróbuj ponownie.');
+                    
+                    if (Notification.permission === 'granted') {
+                        new Notification('Złe ułożenie puzzli! Spróbuj ponownie.');
+                    } else if (Notification.permission !== 'denied') {
+                        Notification.requestPermission().then(permission => {
+                            if (permission === 'granted') {
+                                new Notification('Złe ułożenie puzzli! Spróbuj ponownie.');
+                            }
+                        });
+                    }
                     resetPuzzle();
                 }
-            }, 100); 
+            }, 100);
         }
     }
 }
