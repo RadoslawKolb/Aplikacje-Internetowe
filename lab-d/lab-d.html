@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pogoda</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>sprawdz pogode...</h1>
-    <input type="text" id="miasto" placeholder="tu wpisz miasto...">
-    <button id="pogoda">Pogoda</button>
-    <div id="wynik"></div>
+    <div id="app">
+        <header>
+            <h1>Sprawdź pogodę</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <input type="text" id="miasto" placeholder="Wpisz miasto...">
+                <button id="pogoda">Pokaż pogodę</button>
+            </div>
+            <div id="wynik"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
