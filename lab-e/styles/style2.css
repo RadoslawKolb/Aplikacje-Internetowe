@@ -1,0 +1,102 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ff4e50; /* Bold red background */
+    color: #fff; /* White text */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient header */
+    padding: 25px 0;
+    border-bottom: 4px solid #333;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    transform: scale(1.1); /* Hover scale effect */
+    color: #f9d423; /* Yellow on hover */
+}
+
+.actions a {
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.actions a:hover {
+    background-color: #f9d423;
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.main-section, .boss-ranking-section, .features-section {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Strong shadow effect */
+}
+
+h1, h2, h3 {
+    color: #f9d423; /* Bright yellow for headings */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #fff;
+    border-top: 4px solid #f9d423;
+}
+
+footer a {
+    color: #f9d423;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ff4e50; /* Red on hover */
+}
