@@ -1,0 +1,16 @@
+{
+
+    "electron": {
+    
+    "windows": {
+    
+    "package": [
+    
+    "zip"
+    
+    ]
+    
+    }
+    
+    }
+}
